@@ -1,0 +1,83 @@
+[
+  {
+    "id": "2922c286-16cd-4d43-ab98-c79f698aeab0",
+    "name": "Pawsitive Foundation",
+    "address": "503 Broadway",
+    "city": "Calgary",
+    "country": "Canada",
+    "email": ""
+  },
+  {
+    "id": "853bcd65-b0b3-4f9c-844f-8b4133d7df6f",
+    "name": "Meow Foundation",
+    "address": "33 Pearl Street SW",
+    "city": "Calgary",
+    "country": "Canada",
+    "email": ""
+  },
+  {
+    "id": "4040cfae-39bb-403b-80fa-b770642800b6",
+    "name": "Happy Cat Foundation",
+    "address": "300 Main Street",
+    "city": "Calgary",
+    "country": "Canada",
+    "email": ""
+  },
+  {
+    "id": "eb647e6c-8673-4520-9155-3cec6f7a120d",
+    "name": "Kitty Kitty Foundation",
+    "address": "890 Brannnan Street",
+    "city": "Calgary",
+    "country": "Canada",
+    "email": ""
+  },
+  {
+    "id": "bb1491eb-30e6-4728-a5fa-72f89feaf622",
+    "name": "Fur Ball Shelter",
+    "address": "520 Broadway",
+    "city": "Calgary",
+    "country": "Canada",
+    "email": ""
+  },
+  {
+    "id": "ade0a47b-cee6-4693-b4cd-a7e6cb25f4b7",
+    "name": "Fort Cat Shelter",
+    "address": "1201 Third Avenue",
+    "city": "Calgary",
+    "country": "Canada",
+    "email": ""
+  },
+  {
+    "id": "89898957-04ba-4bd0-9f5c-a7aea7447963",
+    "name": "Saving Cats Shelter",
+    "address": "2650 NW 5th Avenue",
+    "city": "Calgary",
+    "country": "Canada",
+    "email": ""
+  },
+  {
+    "id": "bfc9bea7-66f1-44e9-879b-4d363a888eb4",
+    "name": "Adopt a Cat Foundation",
+    "address": "13 SW 1th Avenue",
+    "city": "Calgary",
+    "country": "Canada",
+    "email": ""
+  },
+
+  {
+    "id": "90ac3319-70d1-4a51-b91d-ba6c2464408c",
+    "name": "Manhattan",
+    "address": "34 Magazine Avenue",
+    "city": "Calgary",
+    "country": "Canada",
+    "email": ""
+  },
+  {
+    "id": "5bf7bd6c-2b16-4129-bddc-9d37ff8539e9",
+    "name": "FurPaws Shelter",
+    "address": "3 Commercial Avenue",
+    "city": "Calgary",
+    "country": "Canada",
+    "email": ""
+  }
+]

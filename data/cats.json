@@ -1,0 +1,92 @@
+[
+  {
+    "id": "83433026-ca32-4c6d-bd86-a39ee8b7303e",
+    "shelterID": "2922c286-16cd-4d43-ab98-c79f698aeab0",
+    "shelterName": "Pawsitive Foundation",
+    "catName": "Robson",
+    "image": "/images/cat0.jpeg",
+    "description": "",
+    "age": "Senior"
+  },
+  {
+    "id": "25ce5d91-a262-4dcf-bb87-42b87546bcfa",
+    "shelterID": "853bcd65-b0b3-4f9c-844f-8b4133d7df6f",
+    "shelterName": "Meow Foundation",
+    "catName": "Robson",
+    "image": "/images/cat1.jpeg",
+    "description": "",
+    "age": "Kitty"
+  },
+  {
+    "id": "b6f35f03-7936-409b-bd2a-446bcc5f30e7",
+    "shelterID": "4040cfae-39bb-403b-80fa-b770642800b6",
+    "shelterName": "Happy Cat Foundation",
+    "catName": "Robson",
+    "image": "/images/cat2.jpeg",
+    "description": "",
+    "age": "Kitty"
+  },
+  {
+    "id": "1b964601-a6dd-4fcc-b5f3-1000338c9557",
+    "shelterID": "eb647e6c-8673-4520-9155-3cec6f7a120d",
+    "shelterName": "Kitty Kitty Foundation",
+    "catName": "Robson",
+    "image": "/images/cat3.jpeg",
+    "description": "",
+    "age": "Kitty"
+  },
+  {
+    "id": "9c268c0a-83dc-4b96-856a-bb5ded2772b1",
+    "shelterID": "bb1491eb-30e6-4728-a5fa-72f89feaf622",
+    "shelterName": "Fur Ball Shelter",
+    "catName": "Robson",
+    "image": "/images/cat4.jpeg",
+    "description": "",
+    "age": "Kitty"
+  },
+  {
+    "id": "fc5261d1-58a0-47e4-9c19-2b7a1715fa1b",
+    "shelterID": "ade0a47b-cee6-4693-b4cd-a7e6cb25f4b7",
+    "shelterName": "Fort Cat Shelter",
+    "catName": "Robson",
+    "image": "/images/cat5.jpeg",
+    "description": "",
+    "age": "Kitty"
+  },
+  {
+    "id": "99478bed-6428-49ed-8eaa-f245a5414336",
+    "shelterID": "89898957-04ba-4bd0-9f5c-a7aea7447963",
+    "shelterName": "Saving Cats Shelter",
+    "catName": "Robson",
+    "image": "/images/cat6.jpeg",
+    "description": "",
+    "age": "Kitty"
+  },
+  {
+    "id": "76ca28c0-7dea-4553-887f-8e5129a80fc3",
+    "shelterID": "bfc9bea7-66f1-44e9-879b-4d363a888eb4",
+    "shelterName": "Adopt a Cat Foundation",
+    "catName": "Robson",
+    "image": "/images/cat1.jpeg",
+    "description": "",
+    "age": "Kitty"
+  },
+  {
+    "id": "e3d6c391-6c91-4931-993f-025aa97dcf9f",
+    "shelterID": "90ac3319-70d1-4a51-b91d-ba6c2464408c",
+    "shelterName": "Purr Foundation",
+    "catName": "Robson",
+    "image": "/images/cat7.jpeg",
+    "description": "",
+    "age": "Kitty"
+  },
+  {
+    "id": "191de346-b3c2-47b4-bf5b-6db90d1e3bdc",
+    "shelterID": "5bf7bd6c-2b16-4129-bddc-9d37ff8539e9",
+    "shelterName": "FurPaws Shelter",
+    "catName": "Robson",
+    "image": "/images/cat8.jpeg",
+    "description": "",
+    "age": "Kitty"
+  }
+]
