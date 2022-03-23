@@ -1,11 +1,14 @@
+require("dotenv").config();
 const express = require("express");
 const path = require("path");
 const app = express();
+const cors = require("cors");
+const jwt = require("jsonwebtoken");
 const catsRoutes = require("./routes/cats");
 const sheltersRoutes = require("./routes/shelters");
+const usersRoutes = require("./routes/users");
+const requestsRoutes = require("./routes/requests");
 
-require("dotenv").config();
-const cors = require("cors");
 const PORT = process.env.PORT || 3001;
 
 // middleware
@@ -18,9 +21,11 @@ app.get("/", (req, res) => {
   res.send("Welcome to meowadopt API");
 });
 
-// routing videos
+// routing cats
 app.use("/cats", catsRoutes);
 app.use("/shelters", sheltersRoutes);
+app.use("/users", usersRoutes);
+app.use("/requests", requestsRoutes);
 
 // start listening on PORT
 app.listen(PORT, () => {
