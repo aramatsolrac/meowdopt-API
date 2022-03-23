@@ -3,41 +3,42 @@ const fs = require("fs");
 const router = express.Router();
 const { v4: uuidv4 } = require("uuid");
 
+// shelter routes
+const allShelters = JSON.parse(
+  fs.readFileSync("./data/shelters.json", "utf-8")
+);
+
+const allCats = JSON.parse(fs.readFileSync("./data/cats.json", "utf-8"));
+
 // get all shelters
 router.get("/", (req, res) => {
-  fs.readFile("./data/shelters.json", "utf-8", (err, data) => {
-    const allShelters = JSON.parse(data);
-    if (err) {
-      res.send("error reading shelters data");
-    } else {
-      res.send(allShelters);
-    }
-  });
+  try {
+    res.send(allShelters);
+  } catch (error) {
+    res.send("Error reading shelters data", error);
+  }
 });
 
 // get a specific shelters
 router.get("/:id", (req, res) => {
-  fs.readFile("./data/shelters.json", "utf-8", (err, data) => {
-    const allShelters = JSON.parse(data);
-    const foundShelter = allShelters.find((data) => data.id === req.params.id);
-    if (err) {
-      res.send(err);
-    } else {
-      res.send(foundCat);
-    }
-  });
+  const foundShelter = allShelters.find((data) => data.id === req.params.id);
+  try {
+    res.send(foundShelter);
+  } catch (error) {
+    res.send("Error finding shelter data:", error);
+  }
 });
 
 // get all cats of a specific shelter
 router.get("/:id/cats", (req, res) => {
-  fs.readFile("./data/cats.json", "utf-8", (err, data) => {
-    const allCats = JSON.parse(data);
-    const foundShelterCats = allCats.filter(
-      (data) => data.shelterID === req.params.id
-    );
-    console.log(foundShelterCats);
+  const foundShelterCats = allCats.filter(
+    (data) => data.shelterID === req.params.id
+  );
+  try {
     res.send(foundShelterCats);
-  });
+  } catch (error) {
+    res.send("Error finding shelter cats:", error);
+  }
 });
 
 module.exports = router;
