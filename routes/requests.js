@@ -35,6 +35,18 @@ router.post("/:id/form", (req, res) => {
   });
 });
 
-// TODO: add a delete router
+// delete request
+router.delete("/:id/delete", (req, res) => {
+  const newRequests = allRequests.filter(
+    (request) => request.id !== req.params.id
+  );
+  console.log(newRequests);
+  fs.writeFile("./data/catsRequests.json", JSON.stringify(newRequests), () => {
+    res.json({
+      status: "Request removed",
+      data: newRequests,
+    });
+  });
+});
 
 module.exports = router;
