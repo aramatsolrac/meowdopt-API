@@ -1,6 +1,7 @@
 const express = require("express");
 const fs = require("fs");
 const router = express.Router();
+const { v4: uuidv4 } = require("uuid");
 
 //cats routes
 const allCats = JSON.parse(fs.readFileSync("./data/cats.json", "utf-8"));
@@ -45,6 +46,7 @@ router.post("/:id/like", (req, res) => {
 // remove like
 router.delete("/:id/remove-like", (req, res) => {
   const newCatsLikes = allLikes.filter((like) => like.catID !== req.params.id);
+  console.log(newCatsLikes);
   fs.writeFile("./data/catsLikes.json", JSON.stringify(newCatsLikes), () => {
     res.json({
       status: "like removed",

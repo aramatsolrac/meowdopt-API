@@ -1,5 +1,4 @@
 [
-  { "isLiked": true, "userID": "1230", "catID": "44" },
-  { "isLiked": true, "userID": "1231", "catID": "55" },
-  { "isLiked": true, "userID": "1232", "catID": "66" }
+  { "isLiked": true, "userID": "1230", "catID": "33" },
+  { "isLiked": true, "userID": "11", "catID": "11" }
 ]
