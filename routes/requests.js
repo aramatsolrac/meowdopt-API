@@ -23,10 +23,6 @@ router.post("/:id/form", (req, res) => {
     catID: req.body.catID,
     userID: req.body.userID,
     name: req.body.name,
-    address: req.body.address,
-    city: req.body.city,
-    country: req.body.country,
-    phone: req.body.phone,
     email: req.body.email,
     status: "Received",
   };
@@ -38,5 +34,7 @@ router.post("/:id/form", (req, res) => {
     });
   });
 });
+
+// TODO: add a delete router
 
 module.exports = router;
