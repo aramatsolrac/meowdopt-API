@@ -4,7 +4,6 @@
     "name": "Pawsitive Foundation",
     "address": "503 Broadway",
     "city": "Calgary",
-    "country": "Canada",
     "email": "contact@pawsitive.com"
   },
   {
@@ -12,7 +11,6 @@
     "name": "Meow Shelter",
     "address": "33 Pearl Street SW",
     "city": "Calgary",
-    "country": "Canada",
     "email": "contact@meowshelter.com"
   },
   {
@@ -20,7 +18,6 @@
     "name": "Happy Cat Foundation",
     "address": "300 Main Street",
     "city": "Calgary",
-    "country": "Canada",
     "email": "contact@happycatfoundation.com"
   },
   {
@@ -28,7 +25,6 @@
     "name": "Kitty Kitty Foundation",
     "address": "890 Brannnan Street",
     "city": "Edmonton",
-    "country": "Canada",
     "email": "contact@kittykitty.com"
   },
   {
@@ -36,7 +32,6 @@
     "name": "Fur Ball Shelter",
     "address": "520 Broadway",
     "city": "Edmonton",
-    "country": "Canada",
     "email": "contact@furball.com"
   },
   {
@@ -44,7 +39,6 @@
     "name": "Smelly Cat Shelter",
     "address": "1201 Third Avenue",
     "city": "Calgary",
-    "country": "Canada",
     "email": "contact@smellycat.com"
   },
   {
@@ -52,7 +46,6 @@
     "name": "Saving Cats Shelter",
     "address": "2650 NW 5th Avenue",
     "city": "Calgary",
-    "country": "Canada",
     "email": "contact@msavingcats.com"
   },
   {
@@ -60,7 +53,6 @@
     "name": "Adopt a Cat Foundation",
     "address": "13 SW 1th Avenue",
     "city": "Edmonton",
-    "country": "Canada",
     "email": "contact@adoptacat.com"
   },
 
@@ -69,7 +61,6 @@
     "name": "Purr Foundation",
     "address": "34 Magazine Avenue",
     "city": "Red Deer",
-    "country": "Canada",
     "email": "contact@purrfoundation.com"
   },
   {
@@ -77,7 +68,6 @@
     "name": "FurPaws Shelter",
     "address": "3 Commercial Avenue",
     "city": "Lethbridge",
-    "country": "Canada",
     "email": "contact@furpaws.com"
   },
   {
@@ -85,7 +75,6 @@
     "name": "Furever Shelter",
     "address": "1800 Heritage Dr SW",
     "city": "Medicine Hat",
-    "country": "Canada",
     "email": "contact@furevershelter.com"
   },
 
@@ -103,7 +92,6 @@
     "name": "The Cat’s Shelter",
     "address": "2500 Rinehart Road",
     "city": "Grande Prairie",
-    "country": "Canada",
     "email": "contact@thecatsshelter.com"
   },
   {
@@ -111,7 +99,6 @@
     "name": "Feline Rescue Society",
     "address": "1213 Main Street",
     "city": "Airdrie",
-    "country": "Canada",
     "email": "contact@felinerescue.com"
   },
   {
@@ -119,7 +106,6 @@
     "name": "Cats and the City",
     "address": "3242 Gore Street",
     "city": "Spruce Grove",
-    "country": "Canada",
     "email": "contact@catsandthecity.com"
   },
   {
@@ -127,7 +113,6 @@
     "name": "Catsrose Shelter",
     "address": "4500 53 St",
     "city": "Leduc",
-    "country": "Canada",
     "email": "contact@catsroseshelter.com"
   }
 ]
