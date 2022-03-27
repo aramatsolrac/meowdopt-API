@@ -8,6 +8,7 @@ const catsRoutes = require("./routes/cats");
 const sheltersRoutes = require("./routes/shelters");
 const usersRoutes = require("./routes/users");
 const requestsRoutes = require("./routes/requests");
+const authRoutes = require("./routes/login");
 
 const PORT = process.env.PORT || 3001;
 
@@ -26,6 +27,7 @@ app.use("/cats", catsRoutes);
 app.use("/shelters", sheltersRoutes);
 app.use("/users", usersRoutes);
 app.use("/requests", requestsRoutes);
+app.use("/login", authRoutes);
 
 // start listening on PORT
 app.listen(PORT, () => {
