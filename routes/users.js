@@ -1,6 +1,9 @@
 const express = require("express");
 const fs = require("fs");
 const router = express.Router();
+const { v4: uuidv4 } = require("uuid");
+
+const allUsers = JSON.parse(fs.readFileSync("./data/users.json", "utf-8"));
 
 // get all users
 router.get("/", (req, res) => {
@@ -48,6 +51,24 @@ router.get("/:id/requests", (req, res) => {
     );
     console.log(foundRequest);
     res.send(foundRequest);
+  });
+});
+
+// // post a new user
+router.post("/signup", (req, res) => {
+  const userInput = {
+    id: uuidv4(),
+    name: req.body.name,
+    username: req.body.username,
+    password: req.body.password,
+    email: req.body.email,
+  };
+  allUsers.push(userInput);
+  fs.writeFile("./data/users.json", JSON.stringify(allUsers), () => {
+    res.json({
+      status: "User created",
+      data: allUsers,
+    });
   });
 });
 
