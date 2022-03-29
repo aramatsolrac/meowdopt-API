@@ -41,4 +41,14 @@ router.get("/:id/cats", (req, res) => {
   }
 });
 
+// get all cats of a specific city
+router.get("/city", (req, res) => {
+  const foundCity = allCats.filter((data) => data.shelterID === req.params.id);
+  try {
+    res.send(foundCity);
+  } catch (error) {
+    res.send("Error finding cats of a city:", error);
+  }
+});
+
 module.exports = router;
