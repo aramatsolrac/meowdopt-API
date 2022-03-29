@@ -2,14 +2,12 @@ const express = require("express");
 const fs = require("fs");
 const router = express.Router();
 const { v4: uuidv4 } = require("uuid");
-
-const allRequests = JSON.parse(
-  fs.readFileSync("./data/catsRequests.json", "utf-8")
-);
+const dataHelper = require("../helpers/dataHelper");
 
 // get all cat requests
 router.get("/", (req, res) => {
   try {
+    const allRequests = dataHelper.getAllRequests();
     res.send(allRequests);
   } catch (error) {
     res.send("Error reading shelters data", error);
@@ -26,7 +24,9 @@ router.post("/:id/form", (req, res) => {
     email: req.body.email,
     status: "Received",
   };
+  const allRequests = dataHelper.getAllRequests();
   allRequests.push(userInput);
+
   fs.writeFile("./data/catsRequests.json", JSON.stringify(allRequests), () => {
     res.json({
       status: "created",
@@ -37,9 +37,9 @@ router.post("/:id/form", (req, res) => {
 
 // delete request
 router.delete("/:id/delete", (req, res) => {
-  const newRequests = allRequests.filter(
-    (request) => request.id !== req.params.id
-  );
+  const newRequests = dataHelper
+    .getAllRequests()
+    .filter((request) => request.id !== req.params.id);
   console.log(newRequests);
   fs.writeFile("./data/catsRequests.json", JSON.stringify(newRequests), () => {
     res.json({
