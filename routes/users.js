@@ -60,8 +60,8 @@ router.post("/signup", (req, res) => {
     id: uuidv4(),
     name: req.body.name,
     username: req.body.username,
-    password: req.body.password,
     email: req.body.email,
+    password: req.body.password,
   };
   allUsers.push(userInput);
   fs.writeFile("./data/users.json", JSON.stringify(allUsers), () => {
