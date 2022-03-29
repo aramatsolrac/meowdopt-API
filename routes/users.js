@@ -2,56 +2,70 @@ const express = require("express");
 const fs = require("fs");
 const router = express.Router();
 const { v4: uuidv4 } = require("uuid");
-
-const allUsers = JSON.parse(fs.readFileSync("./data/users.json", "utf-8"));
+const dataHelper = require("../helpers/dataHelper");
 
 // get all users
 router.get("/", (req, res) => {
-  fs.readFile("./data/users.json", "utf-8", (err, data) => {
-    const allUsers = JSON.parse(data);
-    if (err) {
-      res.send("error reading users data");
-    } else {
-      res.send(allUsers);
-    }
-  });
+  try {
+    const allUsers = dataHelper.getAllUsers();
+    res.send(allUsers);
+  } catch (error) {
+    res.send("Error reading users data:", error);
+  }
 });
 
-// get a specific cat
+// get a specific user
 router.get("/:id", (req, res) => {
-  fs.readFile("./data/users.json", "utf-8", (err, data) => {
-    const allUsers = JSON.parse(data);
-    const foundUser = allUsers.find((data) => data.id === req.params.id);
-    if (err) {
-      res.send(err);
-    } else {
-      res.send(foundUser);
-    }
-  });
+  const foundUser = dataHelper
+    .getAllUsers()
+    .find((data) => data.id === req.params.id);
+  try {
+    res.send(foundUser);
+  } catch (error) {
+    res.send("Error finding user data:", error);
+  }
 });
 
 // get cats liked
 router.get("/:id/favorites", (req, res) => {
-  fs.readFile("./data/catsLikes.json", "utf-8", (err, data) => {
-    const allCatsLikes = JSON.parse(data);
-    const foundCatsLiked = allCatsLikes.filter(
-      (data) => data.userID === req.params.id
-    );
-    console.log(foundCatsLiked);
-    res.send(foundCatsLiked);
+  const foundCatsLiked = dataHelper
+    .getAllLikes()
+    .filter((data) => data.userID === req.params.id);
+  const foundCatsLikedWithDetails = foundCatsLiked.map((catLike) => {
+    const foundCat = dataHelper
+      .getAllCats()
+      .find((data) => data.id === catLike.catID);
+    const foundUser = dataHelper
+      .getAllUsers()
+      .find((data) => data.id === catLike.userID);
+
+    return {
+      ...catLike,
+      catName: foundCat.catName,
+      image: foundCat.image,
+      userName: foundUser.name,
+    };
   });
+  console.log(foundCatsLikedWithDetails);
+  res.send(foundCatsLikedWithDetails);
 });
 
 // get requests send
 router.get("/:id/requests", (req, res) => {
-  fs.readFile("./data/catsRequests.json", "utf-8", (err, data) => {
-    const allRequests = JSON.parse(data);
-    const foundRequest = allRequests.filter(
-      (data) => data.userID === req.params.id
-    );
-    console.log(foundRequest);
-    res.send(foundRequest);
+  const foundRequest = dataHelper
+    .getAllRequests()
+    .filter((data) => data.userID === req.params.id);
+  const foundCatsLikedWithDetails = foundRequest.map((catRequest) => {
+    const foundCat = dataHelper
+      .getAllCats()
+      .find((data) => data.id === catRequest.catID);
+    return {
+      ...catRequest,
+      catName: foundCat.catName,
+      image: foundCat.image,
+    };
   });
+  res.send(foundCatsLikedWithDetails);
 });
 
 // // post a new user
@@ -63,6 +77,7 @@ router.post("/signup", (req, res) => {
     email: req.body.email,
     password: req.body.password,
   };
+  const allUsers = dataHelper.getAllUsers();
   allUsers.push(userInput);
   fs.writeFile("./data/users.json", JSON.stringify(allUsers), () => {
     res.json({
