@@ -6,11 +6,27 @@ const { v4: uuidv4 } = require("uuid");
 //cats routes
 const allCats = JSON.parse(fs.readFileSync("./data/cats.json", "utf-8"));
 const allLikes = JSON.parse(fs.readFileSync("./data/catsLikes.json", "utf-8"));
+const allShelters = JSON.parse(
+  fs.readFileSync("./data/shelters.json", "utf-8")
+);
 
 // get all cats
 router.get("/", (req, res) => {
   try {
-    res.send(allCats);
+    const allCatsWithCity = allCats.map((cat) => {
+      const foundShelter = allShelters.find(
+        (data) => data.id === cat.shelterID
+      );
+
+      return {
+        ...cat,
+        city: foundShelter.city,
+      };
+    });
+
+    console.log({ allCatsWithCity });
+
+    res.send(allCatsWithCity);
   } catch (error) {
     res.send("Error reading cats data:", error);
   }
