@@ -12,7 +12,9 @@ exports.index = (_req, res) => {
 
 exports.show = (req, res) => {
   knex("cat")
-    .where("id", req.params.id)
+    .select("shelter.name as shelter_name", "cat.*")
+    .innerJoin("shelter", "shelter.id", "cat.shelter_id")
+    .where("cat.id", req.params.id)
     .first()
     .then((data) => {
       res.status(200).json(data);
@@ -21,11 +23,12 @@ exports.show = (req, res) => {
 };
 
 exports.like = (req, res) => {
+  console.log("Like");
   knex("catLikes")
     .insert({
       isLiked: true,
-      user_id: req.body.user_id,
-      cat_id: req.body.cat_id,
+      user_id: req.body.userID,
+      cat_id: req.body.catID,
     })
     .then((data) => {
       res.status(200).json(data);
@@ -36,8 +39,8 @@ exports.like = (req, res) => {
 exports.removeLike = (req, res) => {
   knex("catLikes")
     .where({
-      user_id: req.body.user_id,
-      cat_id: req.body.cat_id,
+      user_id: req.body.userID,
+      cat_id: req.body.catID,
     })
     .del()
     .then((data) => {
