@@ -20,7 +20,7 @@ app.use(cors());
 
 // home route
 app.get("/", (req, res) => {
-  res.send("Welcome to meowadopt API");
+  res.sendFile(path.join(__dirname, "public/index.html"));
 });
 
 // routing cats
