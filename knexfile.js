@@ -3,7 +3,7 @@
 /**
  * @type { Object.<string, import("knex").Knex.Config> }
  */
-module.exports = {
+const connections = {
   development: {
     client: "mysql",
     connection: {
@@ -14,4 +14,13 @@ module.exports = {
       charset: "utf8",
     },
   },
+  production: {
+    client: "mysql",
+    connection: process.env.CLEARDB_DATABASE_URL,
+  },
 };
+
+module.exports =
+  process.env.NODE_ENV === "production"
+    ? connections.production
+    : connections.development;
