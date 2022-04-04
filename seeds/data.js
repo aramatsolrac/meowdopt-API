@@ -2,7 +2,6 @@
  * @param { import("knex").Knex } knex
  * @returns { Promise<void> }
  */
-// import seed data files, arrays of objects
 const shelterData = require("../seed_data/shelter");
 const catData = require("../seed_data/cat");
 const userData = require("../seed_data/user");
