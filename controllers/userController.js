@@ -1,4 +1,4 @@
-const knex = require("knex")(require("../knexfile").development);
+const knex = require("knex")(require("../knexfile"));
 const bcrypt = require("bcrypt");
 
 exports.index = (_req, res) => {
