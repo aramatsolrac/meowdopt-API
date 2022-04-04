@@ -1,4 +1,5 @@
 const knex = require("knex")(require("../knexfile").development);
+const bcrypt = require("bcrypt");
 
 exports.index = (_req, res) => {
   knex("user")
@@ -46,15 +47,17 @@ exports.requests = (req, res) => {
 };
 
 exports.signup = (req, res) => {
-  knex("user")
-    .insert({
-      name: req.body.name,
-      username: req.body.username,
-      email: req.body.email,
-      password: req.body.password,
-    })
-    .then((data) => {
-      res.status(200).json(data);
-    })
-    .catch((err) => res.status(400).send(`Error creating User: ${err}`));
+  bcrypt.hash(req.body.password, 10).then((hashedPassword) => {
+    return knex("user")
+      .insert({
+        name: req.body.name,
+        username: req.body.username,
+        email: req.body.email,
+        password: hashedPassword,
+      })
+      .then((data) => {
+        res.status(200).json(data);
+      })
+      .catch((err) => res.status(400).send(`Error creating User: ${err}`));
+  });
 };
