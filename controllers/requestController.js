@@ -11,8 +11,8 @@ exports.index = (_req, res) => {
 exports.add = (req, res) => {
   knex("catRequests")
     .insert({
-      user_id: req.body.user_id,
-      cat_id: req.body.cat_id,
+      user_id: req.body.userID,
+      cat_id: req.body.catID,
       name: req.body.name,
       email: req.body.email,
     })
