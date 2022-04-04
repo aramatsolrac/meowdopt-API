@@ -2,6 +2,8 @@ const knex = require("knex")(require("../knexfile").development);
 
 exports.index = (_req, res) => {
   knex("cat")
+    .select("shelter.city", "cat.*")
+    .innerJoin("shelter", "shelter.id", "cat.shelter_id")
     .then((data) => {
       res.status(200).json(data);
     })
