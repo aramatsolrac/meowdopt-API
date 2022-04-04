@@ -17,7 +17,7 @@ exports.show = (req, res) => {
     .catch((err) => res.status(400).send(`Error retrieving User: ${err}`));
 };
 
-exports.favorite = (req, res) => {
+exports.favorites = (req, res) => {
   knex("catLikes")
     .select(
       "cat.name as cat_name",
