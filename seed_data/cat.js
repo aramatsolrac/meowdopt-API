@@ -185,8 +185,9 @@ module.exports = [
     name: "Luiz",
     image: "/images/cat18.jpeg",
     gender: "Male",
-    description: "__",
-    age: "Kitty",
+    description:
+      "This wise, loving senior gentleman was rescued in a small town just outside Calgary and his owners were not able to be located. So Sea Lion is starting over. After a full health check, a bit of a shave to remove some matts, Sea Lion is healthy and would like to meet his match as soon as possible. He is not a fan of other cats and would prefer to be the only King in your life. Come visit Sea Lion and fall in love",
+    age: "Senior",
   },
   {
     id: "2020",
