@@ -1,9 +1,9 @@
 require("dotenv").config();
 const express = require("express");
 const path = require("path");
+const bodyParser = require("body-parser");
 const app = express();
 const cors = require("cors");
-const jwt = require("jsonwebtoken");
 const catsRoutes = require("./routes/cats");
 const sheltersRoutes = require("./routes/shelters");
 const usersRoutes = require("./routes/users");
@@ -15,6 +15,7 @@ const PORT = process.env.PORT || 3001;
 // middleware
 app.use(express.json());
 app.use(express.static("public"));
+app.use(bodyParser.json());
 app.use(cors());
 
 // home route
