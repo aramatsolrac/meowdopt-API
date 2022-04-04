@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>meowdopt API</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="30x30"
+      href="https://cdn-icons-png.flaticon.com/512/1864/1864514.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        margin: 1.5625rem 2.5rem;
+      }
+      header,
+      main,
+      section {
+        margin: 2rem 0;
+      }
+      a {
+        color: #a5573b;
+      }
+      scan {
+        color: #dea48f;
+      }
+      code {
+        color: black;
+      }
+      a:hover {
+        color: #c90a63;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div style="display: flex; align-items: center">
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/1864/1864514.png"
+          width="30"
+          height="30"
+          alt="meowdopt"
+        />
+        <h2 id="meowdopt-api" style="margin: 0 0 0 10px">meowdopt API</h2>
+      </div>
+      <ul>
+        <li style="padding: 10px 0">
+          It is a cat API seeded with a list of cats and shelters from Alberta,
+          Canada.
+        </li>
+      </ul>
+    </header>
+    <hr />
+    <main>
+      <h3>Routes</h3>
+      <section>
+        <h4>Shelters</h4>
+        <ul>
+          <li>
+            <scan>GET <code>/shelters</code></scan>
+          </li>
+          <li>
+            <scan>GET <code>/shelters/:id</code></scan>
+          </li>
+          <li>
+            <scan>POST <code>/shelters/:id/cats</code></scan>
+          </li>
+          <li>
+            <scan>DELETE <code>/cats/:id/remove-like</code></scan>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h4>Cats</h4>
+        <ul>
+          <li>
+            <scan>GET <code>/cats</code></scan>
+          </li>
+          <li>
+            <scan>GET <code>/cats/:id</code></scan>
+          </li>
+          <li>
+            <scan>POST <code>/cats/:id/like</code></scan>
+          </li>
+          <li>
+            <scan>DELETE <code>/cats/:id/remove-like</code></scan>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h4>Users</h4>
+        <ul>
+          <li>
+            <scan>GET <code>/users</code></scan>
+          </li>
+          <li>
+            <scan>GET <code>/users/:id</code></scan>
+          </li>
+          <li>
+            <scan>GET <code>/users/:id/favorites</code></scan>
+          </li>
+          <li>
+            <scan>GET <code>/users/:id/requests</code></scan>
+          </li>
+          <li>
+            <scan>POST <code>/users/signup</code></scan>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h4>Login</h4>
+        <ul>
+          <li>
+            <scan>POST <code>/login</code></scan>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <h3 id="author">Author</h3>
+      <ul>
+        <li>
+          Linkedin -
+          <a href="https://www.linkedin.com/in/tamaracarlos/">Tamara Carlos</a>
+        </li>
+        <li>
+          Twitter - <a href="https://twitter.com/aramatsolrac">@aramatsolrac</a>
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>
