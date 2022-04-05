@@ -1,18 +1,30 @@
 module.exports = [
   {
-    id: "1",
     cat_id: "22",
     user_id: "1",
-    name: "Lucas",
-    email: "lucas@gmail.com",
+    name: "Tamara",
+    email: "tamara@gmail.com",
     status: "Received",
   },
   {
-    id: "2",
-    cat_id: "1010",
+    cat_id: "33",
     user_id: "1",
-    name: "Lucas",
-    email: "lucas@gmail.com",
-    status: "Received",
+    name: "Tamara",
+    email: "tamara@gmail.com",
+    status: "In Review",
+  },
+  {
+    cat_id: "44",
+    user_id: "1",
+    name: "Tamara",
+    email: "tamara@gmail.com",
+    status: "Approved",
+  },
+  {
+    cat_id: "55",
+    user_id: "1",
+    name: "Tamara",
+    email: "tamara@gmail.com",
+    status: "Declined",
   },
 ];
