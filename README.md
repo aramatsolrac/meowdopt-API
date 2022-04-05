@@ -11,7 +11,7 @@
 
 ## Overview
 
-- The url for the API is `https://meowadopt-api.herokuapp.com/`
+- The url for the API is `https://meowdopt-api.herokuapp.com/`
 
 ### Technologies
 
