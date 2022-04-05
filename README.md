@@ -7,6 +7,7 @@
 - [Overview](#overview)
 - [Technologies](#technologies)
 - [Routes](#routes)
+- [Installing](#installing)
 - [Author](#author)
 
 ## Overview
@@ -21,7 +22,7 @@
 <a href="http://knexjs.org/" target="_blank" rel="noreferrer"> <img src="https://static-00.iconduck.com/assets.00/knex-icon-512x512-vg01e8qb.png" alt="knex" width="40" height="40"/> </a>
 <a href="https://www.mysql.com/" target="_blank" rel="noreferrer"> <img src="https://styles.redditmedia.com/t5_2qm6k/styles/communityIcon_dhjr6guc03x51.png" alt="mysql" width="40" height="40"/> </a></p>
 
-## Routes
+### Routes
 
 <details>
 <summary>Shelters</summary>
@@ -356,6 +357,13 @@
 ```
 
 </details>
+
+
+### Installing
+
+- Download this Repository or clone it: `git clone git@github.com:aramatsolrac/meowdopt-API.git`
+- `cd` into the new folder and type `npm install`
+- To run the React project type: `npm start`
 
 ### Author
 
