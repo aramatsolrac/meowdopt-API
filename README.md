@@ -360,7 +360,7 @@
 
 - Download this Repository or clone it: `git clone git@github.com:aramatsolrac/meowdopt-API.git`
 - `cd` into the new folder and type `npm install`
-- To run the React project type: `npm start`
+- To run the project type: `npm start`
 
 ### Author
 - Linkedin - [Tamara Carlos](https://www.linkedin.com/in/tamaracarlos/)
