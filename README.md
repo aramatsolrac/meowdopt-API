@@ -13,6 +13,7 @@
 ## Overview
 
 - The url for the API is `https://meowdopt-api.herokuapp.com/`
+  - _Note: If it does not open at the first try, give it a minute because free heroku dyno could be sleeping._  
 
 ### Technologies
 
