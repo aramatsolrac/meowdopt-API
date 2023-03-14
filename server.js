@@ -10,7 +10,7 @@ const usersRoutes = require("./routes/users");
 const requestsRoutes = require("./routes/requests");
 const authRoutes = require("./routes/login");
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 5000;
 
 // middleware
 app.use(express.json());
