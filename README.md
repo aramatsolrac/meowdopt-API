@@ -13,6 +13,7 @@
 ## Overview
 
 - The url for the API is `https://meowdopt-api.herokuapp.com/`
+  - _Note: If it does not open at the first try, give it a minute because free heroku dyno could be sleeping._  
 
 ### Technologies
 
@@ -360,7 +361,7 @@
 
 - Download this Repository or clone it: `git clone git@github.com:aramatsolrac/meowdopt-API.git`
 - `cd` into the new folder and type `npm install`
-- To run the React project type: `npm start`
+- To run the project type: `npm start`
 
 ### Author
 - Linkedin - [Tamara Carlos](https://www.linkedin.com/in/tamaracarlos/)
